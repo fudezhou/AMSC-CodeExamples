@@ -133,7 +133,7 @@ main()
   using namespace std;
 
   // write true/false instead of 0/1
-  cout.setf(ios::boolalpha);
+  cout.setf(ios::boolalpha); // in this way we print true/false instead of 0/1
   cout << "**********************************************" << endl;
   cout << "***********   NUMERIC  LIMITS ****************" << endl;
   cout << "**********************************************" << endl;
@@ -176,7 +176,7 @@ main()
           "notation"
        << endl;
   cout.setf(ios::scientific);
-  auto maxprec = numeric_limits<double>::digits10;
+  auto maxprec = numeric_limits<double>::digits10; // max precision (?)
   cout.precision(maxprec);
   cout << " We test if epsilon is what it is meant to be!\n";
   double one(1.0);
@@ -190,7 +190,7 @@ main()
        << std::endl;
   cout << "What happens if an unsigned int underflows?\n";
   unsigned int zero = 0u;
-  unsigned int under = zero - 1u;
+  unsigned int under = zero - 1u; // this is an underflow of an unsigned int
   cout << "0u-1u as unsigned integers= " << under << std::endl;
   cout << "You can test if a number is NaN:\n";
   double y = 0. / 0.;
