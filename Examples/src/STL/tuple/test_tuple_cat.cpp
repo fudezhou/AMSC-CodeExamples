@@ -6,8 +6,7 @@
 #include <iostream>
 #include <string>
 #include <tuple>
-int
-main()
+int main()
 {
   std::tuple<int, std::string, float> t1(10, "Test", 3.14);
   std::cout << "t1= " << t1 << std::endl;

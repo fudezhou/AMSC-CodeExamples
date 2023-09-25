@@ -7,7 +7,7 @@
 #include <string>
 #include <tuple>
 
-struct S
+struct S // in cpp struct is like a class where everything is public by default
 {
   int         n;
   std::string s;
@@ -19,10 +19,12 @@ struct S
   bool
   operator<(const S &rhs) const
   {
+    // this is a method of special kind, it is called operator< and it is
+    // used to compare two objects of the same type; 
     // compares n to rhs.n,
     // then s to rhs.s,
     // then d to rhs.d
-    return std::tie(n, s, d) < std::tie(rhs.n, rhs.s, rhs.d);
+    return std::tie(n, s, d) < std::tie(rhs.n, rhs.s, rhs.d); // tie has a comparison operator
   }
   bool
   operator==(const S &rhs) const
